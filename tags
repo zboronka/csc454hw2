@@ -1,0 +1,18 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/3fdf28bc/
+VendingMachine	VendingMachine.java	/^	public VendingMachine(int q, int d, int n, int v, boolean c) {$/;"	m	class:VendingMachine
+VendingMachine	VendingMachine.java	/^public class VendingMachine {$/;"	c
+change	VendingMachine.java	/^	private boolean change;$/;"	f	class:VendingMachine	file:
+delta	VendingMachine.java	/^	public void delta(String input) {$/;"	m	class:VendingMachine
+dimes	VendingMachine.java	/^	private int dimes;$/;"	f	class:VendingMachine	file:
+hw2	hw2.java	/^public class hw2 {$/;"	c
+lambda	VendingMachine.java	/^	public String lambda() {$/;"	m	class:VendingMachine
+main	hw2.java	/^	public static void main(String[] args) {$/;"	m	class:hw2
+nickels	VendingMachine.java	/^	private int nickels;$/;"	f	class:VendingMachine	file:
+quarters	VendingMachine.java	/^	private int quarters;$/;"	f	class:VendingMachine	file:
+value	VendingMachine.java	/^	private int value;$/;"	f	class:VendingMachine	file:
