@@ -11,8 +11,13 @@ public class hw2 {
 				break;
 			}
 			else {
-				System.out.println(v.lambda());
-				v.delta(command);
+				try {
+					System.out.println(v.lambda());
+					v.delta(command);
+				}
+				catch(NoChangeException c) {
+					System.out.println(c.getMessage());
+				}
 			}
 		}
 	}

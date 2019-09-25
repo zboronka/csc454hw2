@@ -13,15 +13,15 @@ public class VendingMachine {
 		change = c;
 	}
 
-	public String lambda() {
+	public String lambda() throws NoChangeException {
 		String ret = "";
 
 		if(change) {
-			ret += getChange();
+			ret += getChange(value % 100);
+			ret += " ";
 		}
 
-		int i;
-		for(i = 0; i < value / 100; i++) {
+		for(int i = 0; i < value / 100; i++) {
 			ret += "coffee ";
 		}
 
@@ -32,10 +32,10 @@ public class VendingMachine {
 		return ret;
 	}
 
-	public void delta(String input) {
+	public void delta(String input) throws NoChangeException {
 		value = value % 100; // Reset after coffee withdrawal
 		if(change) {
-			for (char i : getChange().toCharArray()) {
+			for (char i : getChange(value).toCharArray()) {
 				if(i == 'q') {
 					quarters--;
 					value -= 25;
@@ -79,12 +79,16 @@ public class VendingMachine {
 		value += q*25 + d*10 + n*5;
 	}
 
-	private String getChange() {
+	private String getChange(int v) throws NoChangeException {
 		String ret = "";
 
-		int q = value / 25;
-		int d = (value-q*25) / 10;
-		int n = ((value-q*25)-d*10) / 5;
+		int q = v / 25 > quarters ? quarters : v / 25;
+		int d = (v-q*25) / 10 > dimes ? dimes : (v-q*25) / 10;
+		int n = ((v-q*25)-d*10) / 5 > nickels ? nickels : ((v-q*25)-d*10) / 5;
+
+		if(q*25 + d*10 + n*5 != v) {
+			throw new NoChangeException("Not enough change in machine");
+		}
 
 		for(int i = 0; i < q; i++) {
 			ret += "q";
