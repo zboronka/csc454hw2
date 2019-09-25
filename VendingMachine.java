@@ -33,10 +33,6 @@ public class VendingMachine {
 	}
 
 	public void delta(String input) {
-		int q = 0;
-		int d = 0;
-		int n = 0;
-
 		value = value % 100; // Reset after coffee withdrawal
 		if(change) {
 			for (char i : getChange().toCharArray()) {
@@ -56,6 +52,10 @@ public class VendingMachine {
 		}
 
 		change = false;
+
+		int q = 0;
+		int d = 0;
+		int n = 0;
 
 		for (char i : input.toCharArray()) {
 			if(i == 'q') {
