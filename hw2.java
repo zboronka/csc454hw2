@@ -17,6 +17,7 @@ public class hw2 {
 				}
 				catch(NoChangeException c) {
 					System.out.println(c.getMessage());
+					break;
 				}
 			}
 		}
