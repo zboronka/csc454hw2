@@ -5,14 +5,30 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/3fdf28bc/
+ATTACH	Makefile	/^ATTACH=-connect com.sun.jdi.SocketAttach:hostname=localhost,port=8000$/;"	m
+CC	Makefile	/^CC=javac$/;"	m
+CLASS	Makefile	/^CLASS=hw2$/;"	m
+DEBUGGER	Makefile	/^DEBUGGER=jdb$/;"	m
+DFLAGS	Makefile	/^DFLAGS=-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n$/;"	m
+FLAGS	Makefile	/^FLAGS=-g$/;"	m
+JVM	Makefile	/^JVM=java$/;"	m
+LIBS	Makefile	/^LIBS=$/;"	m
+NoChangeException	NoChangeException.java	/^	public NoChangeException(String message) {$/;"	m	class:NoChangeException
+NoChangeException	NoChangeException.java	/^public class NoChangeException extends Exception {$/;"	c
+SOURCE	Makefile	/^SOURCE=*.java$/;"	m
+TARGET	Makefile	/^TARGET=$/;"	m
 VendingMachine	VendingMachine.java	/^	public VendingMachine(int q, int d, int n, int v, boolean c) {$/;"	m	class:VendingMachine
 VendingMachine	VendingMachine.java	/^public class VendingMachine {$/;"	c
+all	Makefile	/^all:$/;"	t
 change	VendingMachine.java	/^	private boolean change;$/;"	f	class:VendingMachine	file:
-delta	VendingMachine.java	/^	public void delta(String input) {$/;"	m	class:VendingMachine
+debug	Makefile	/^debug:$/;"	t
+delta	VendingMachine.java	/^	public void delta(String input) throws NoChangeException {$/;"	m	class:VendingMachine
 dimes	VendingMachine.java	/^	private int dimes;$/;"	f	class:VendingMachine	file:
+getChange	VendingMachine.java	/^	private String getChange(int v) throws NoChangeException {$/;"	m	class:VendingMachine	file:
 hw2	hw2.java	/^public class hw2 {$/;"	c
-lambda	VendingMachine.java	/^	public String lambda() {$/;"	m	class:VendingMachine
+lambda	VendingMachine.java	/^	public String lambda() throws NoChangeException {$/;"	m	class:VendingMachine
 main	hw2.java	/^	public static void main(String[] args) {$/;"	m	class:hw2
 nickels	VendingMachine.java	/^	private int nickels;$/;"	f	class:VendingMachine	file:
 quarters	VendingMachine.java	/^	private int quarters;$/;"	f	class:VendingMachine	file:
+server	Makefile	/^server:$/;"	t
 value	VendingMachine.java	/^	private int value;$/;"	f	class:VendingMachine	file:
