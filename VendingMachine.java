@@ -18,11 +18,10 @@ public class VendingMachine {
 
 		if(change) {
 			ret += getChange(value % 100);
-			ret += " ";
 		}
 
 		for(int i = 0; i < value / 100; i++) {
-			ret += "coffee ";
+			ret += "<coffee>";
 		}
 
 		if(ret.compareTo("") == 0) {
